@@ -1,0 +1,47 @@
+@use 'dop_styles/themes';
+
+@forward 'dop_styles/tokens';
+@forward 'dop_styles/typography.module';
+@forward 'dop_styles/colors.module';
+@forward 'dop_styles/elevation.module';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+   --body-margins: 16px;
+   --body-grow: 0;
+   --body-columns: 4;
+   --body-gutters: 8px;
+ 
+   @media(min-width: 632px) {
+     --body-margins: 32px;
+     --body-columns: 12;
+     --body-gutters: 12px;
+ 
+   }
+ 
+   @media(min-width: 904px) {
+     --body-margins: auto;
+   }
+ 
+   @media(min-width: 1240px) {
+     --body-margins: 200px; 
+     --body-grow: 1;
+     --body-gutters: 32px;
+   }
+ 
+   @include themes.theme;
+}
+
+*{
+   margin: 0;
+}
+
+a{
+   text-decoration: none;
+}
+
+.head{
+   background-image: url('./image/head_bg.jpg');
+}
+
